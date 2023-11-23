@@ -1,0 +1,153 @@
+body{
+    background-color: rgb(255, 232, 242);
+    margin: 0;
+}
+footer{
+    background-color: white;
+}
+nav ul{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 12fr;
+    list-style-type: none;
+    padding: 5px;
+    gap: 5px;
+    margin: 0;
+}
+nav ul li a{
+    text-decoration: none;
+    color: blue;
+    text-align: left;
+}
+nav ul li{
+    border: 1px solid rgb(167, 167, 167);
+    padding-left: 20px;
+}
+main{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 2fr;
+    grid-template-areas: 
+        "n n n n n n n"
+        "a a a a a a s"
+        "f f f f f f f";
+}
+aside{
+    grid-area: s;
+    margin: 20px 20px 20px 0px;
+}
+article{
+    grid-area: a;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 10px;
+    margin: 20px;
+}
+article div img{
+    width: 100%;
+}
+nav{
+    grid-area: n;
+}
+footer{
+    grid-area: f;
+}
+
+article div, aside{
+    background-color: white;
+    border-radius: 10px;
+}
+.kosar{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-areas: 
+        "h h h r";
+    border-bottom: 1px solid black;
+}
+.kosar ul{
+    list-style-type: none;
+}
+.x{
+    color: red;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    border: 1px solid rgb(198, 198, 198);
+    width: 16px;
+    height: 10px;
+    border-radius: 5px;
+    padding: 0px 2px 0px 2px;
+    margin: 3px;
+}
+.helyszin{
+    text-align: left;
+    grid-area: h;
+    padding-left: 10px;
+}
+.helyszin ul{
+    padding-left: 5px;
+}
+.arak{
+    text-align: right;
+    grid-area: r;
+    padding-right: 20px;
+}
+.arak ul{
+    padding-left: 20px;
+}
+.gomb{
+    font-family: Arial, Helvetica, sans-serif;
+    border: 1px solid rgb(0, 0, 0);
+    border-radius: 3px;
+    width:65px;
+    padding-left: 4px;
+    background-color: rgb(210, 210, 210);
+}
+.ar{
+    font-family: Arial, Helvetica, sans-serif;
+    border: 1px solid rgb(207, 207, 207);
+    border-radius: 3px;
+    width:65px;
+    padding-left: 4px;
+}
+.gomb2{
+    font-family: Arial, Helvetica, sans-serif;
+    border: 1px solid rgb(0, 0, 0);
+    border-radius: 3px;
+    width:160px;
+    padding-left: 4px;
+    color: red;
+    background-color: rgb(216, 216, 216);
+    margin:15px
+}
+.vegosszeg{
+    text-align: center;
+    color: red;
+    margin: 0;
+}
+
+/*Mobil nézet- reszponzivitás kialakítása. */
+@media only screen and (max-width: 420px) {/*töréspont*/
+    body, main {
+      width: 100%;
+    }
+    main{
+        font-size: 15px;
+        grid-template-columns:1fr;
+        grid-template-areas: 
+                "n"
+                "s"
+                "a"
+                "f";
+    }
+    nav ul{
+        grid-template-columns: 1fr;
+        gap: 5px;
+        width: 100%;
+    }
+    
+    .kepek{
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+    article{
+        grid-template-columns:1fr;
+    }
+  }
