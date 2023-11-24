@@ -19,8 +19,15 @@ nav ul li a{
     text-align: left;
 }
 nav ul li{
-    border: 1px solid rgb(167, 167, 167);
+    border: 1px solid rgb(198, 198, 198);
     padding-left: 20px;
+}
+nav ul li:hover{
+    background-color: rgb(171, 171, 171);
+    border: 1px solid red;
+}
+nav ul li a:hover{
+    color: red;
 }
 main{
     display: grid;
@@ -76,6 +83,10 @@ article div, aside{
     padding: 0px 2px 0px 2px;
     margin: 3px;
 }
+.x:hover{
+    background-color: rgb(255, 0, 0);
+    color:white
+}
 .helyszin{
     text-align: left;
     grid-area: h;
@@ -99,6 +110,8 @@ article div, aside{
     width:65px;
     padding-left: 4px;
     background-color: rgb(210, 210, 210);
+    grid-area: g;
+    margin: 5px;
 }
 .ar{
     font-family: Arial, Helvetica, sans-serif;
@@ -106,6 +119,9 @@ article div, aside{
     border-radius: 3px;
     width:65px;
     padding-left: 4px;
+    text-align: right;
+    grid-area: p;
+    margin: 5px;
 }
 .gomb2{
     font-family: Arial, Helvetica, sans-serif;
@@ -115,16 +131,33 @@ article div, aside{
     padding-left: 4px;
     color: red;
     background-color: rgb(216, 216, 216);
-    margin:15px
+    margin:15px;
+    margin-top:380px
+}
+.gomb2:hover{
+    border: 1px solid rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+    background-color: rgb(255, 0, 0);
+}
+.gomb:hover{
+    border: 1px solid rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+    background-color: rgb(255, 0, 0);
 }
 .vegosszeg{
     text-align: center;
     color: red;
     margin: 0;
 }
+.gombok{
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-areas: 
+        "g p";
+}
 
 /*Mobil nézet- reszponzivitás kialakítása. */
-@media only screen and (max-width: 420px) {/*töréspont*/
+@media only screen and (max-width: 432px) {/*töréspont*/
     body, main {
       width: 100%;
     }
@@ -149,5 +182,14 @@ article div, aside{
     }
     article{
         grid-template-columns:1fr;
+    }
+    aside{
+        margin-left: 20px;
+    }
+    .gomb2{
+        margin-top: 20px;
+    }
+    .gombok{
+        margin: 5px;
     }
   }
